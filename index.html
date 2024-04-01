@@ -44,22 +44,56 @@
                         delivering impactful results</p>
 
                         <div class="tab-titles">
-                            <p class="tab-links active-link">Skills</p>
-                            <p class="tab-links">Experience</p>
-                            <p class="tab-links">Education</p>
+                            <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                            <p class="tab-links" onclick="opentab('experience')">Experience</p>
+                            <p class="tab-links" onclick="opentab('education')">Education</p>
                         </div>
-
-                        <div class="tab-contents">
+                        <div class="tab-contents active-tab" id="skills">
                             <ul>
                                 <li><span>Programming Languages</span><br> Java, Python, JavaScript, C#</li>
                                 <li><span>Frontend Dev</span><br>  HTML/CSS, Bootstrap, ReactJS, AJAX</li>
                                 <li><span>Backend Dev</span><br>  Spring Boot, MVC, Servlets, JSP, Node, Flask</li>
                             </ul>
                         </div>
+                        <div class="tab-contents" id="experience">
+                            <ul>
+                                <li><span>Indian Space Research Organization</span><br> Matlab Feb '23 - Apr '23</li>
+                                <li><span>Project Trainee/Developer</span><br>  HTML/CSS, Bootstrap, ReactJS, AJAX</li>
+                                <li>Collaborated with a multidisciplinary team, embodying strong teamwork and effective 
+                                    dialogue in the development of a cutting-edge debris tracking model utilizing MATLAB, 
+                                    aimed at enhancing space debris monitoring.</li>
+                                <li>Applied advanced algorithms to process data from ground-based radar systems to assess
+                                    pass success and coverage by adjusting time and azimuth limits, contributing to the 
+                                    organization’s space situational awareness initiatives.</li>
+                            </ul>
+                        </div>
+                        <div class="tab-contents" id="education">
+                            <ul>
+                                <li><span>Northeastern University Expected May 2025</span><br>Master of Science in Software Engineering Systems</li>
+                                <li><span>Vellore Institute of Technology, May 2023</span><br>  Bachelor of Engineering in Computer Science and Business Systems</li>
+                            </ul>
+                        </div>
                 </div>
             </div>
         </div>
     </div>
+
+<script>
+    var tablinks = document.getElementsByClassName("tab-links");
+    var tabcontents = document.getElementsByClassName("tab-contents");
+
+    function opentab(tabname){
+        for(tablink of tablinks){
+            tablink.classList.remove("active-link");
+        }
+        for(tabcontent of tabcontents){
+            tabcontent.classList.remove("active-tab");
+        }
+        event.currentTarget.classList.add("active-link");
+        document.getElementById(tabname).classList.add("active-tab");
+    }
+</script>
+
     
 </body>
 </html>
