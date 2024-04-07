@@ -13,13 +13,15 @@
         <div id="container">
             <nav>
                 <img src="Pics/Logo.png" class="Logo">
-                <ul>
-                    <li><a href=#">Home</a></li>
-                    <li><a href=#">About</a></li>
-                    <li><a href=#">Services</a></li>
-                    <li><a href=#">Portfolio</a></li>
-                    <li><a href=#">Contact</a></li>
+                <ul id="sidemenu">
+                    <li><a href="#header">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#portfolio">Portfolio</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                    <i class="fas fa-times" onclick="closemenu()"></i>
                 </ul>
+                <i class="fas fa-bars" onclick="openmenu()"></i>
             </nav>
             <div class="header-text">
                 <p>Full Stack Developer</p>
@@ -51,9 +53,13 @@
                         </div>
                         <div class="tab-contents active-tab" id="skills">
                             <ul>
-                                <li><span>Programming Languages</span><br> Java, Python, JavaScript, C#</li>
-                                <li><span>Frontend Dev</span><br>  HTML/CSS, Bootstrap, ReactJS, AJAX</li>
-                                <li><span>Backend Dev</span><br>  Spring Boot, MVC, Servlets, JSP, Node, Flask</li>
+                                <li><span>Programming Languages</span><br>Java, Python, JavaScript, TypeScript, C#</li>
+                                <li><span>Frontend Dev</span><br>HTML, CSS, Bootstrap, ReactJS, AJAX</li>
+                                <li><span>Design</span><br>Figma</li>
+                                <li><span>Data Visualization</span><br>Chartjs, D3js, CanvasJS</li>
+                                <li><span>Backend Dev</span><br>Spring Boot, MVC, Servlets, JSP, Node, Flask</li>
+                                <li><span>Database & ORM:</span><br>SQL, Hibernate, MySQL, MongoDB</li>
+                                <li><span>Certifications</span><br> AWS Certified Cloud Practitioner (Nov ’22 – Nov ‘25)</li>                                </li>
                             </ul>
                         </div>
                         <div class="tab-contents" id="experience">
@@ -153,28 +159,6 @@
 
 
 
-
-
-<!-- ----------Script-------------->
-
-<script>
-    var tablinks = document.getElementsByClassName("tab-links");
-    var tabcontents = document.getElementsByClassName("tab-contents");
-
-    function opentab(tabname){
-        for(tablink of tablinks){
-            tablink.classList.remove("active-link");
-        }
-        for(tabcontent of tabcontents){
-            tabcontent.classList.remove("active-tab");
-        }
-        event.currentTarget.classList.add("active-link");
-        document.getElementById(tabname).classList.add("active-tab");
-    }
-</script>
-
-
-
 <!-- ------------ contact ------------->
 
 <div id="contact">
@@ -200,7 +184,47 @@
             </div>
         </div>
     </div>
+    <div class="copyright">
+        <p>Copyright © Manish 2024</p>
+    </div>
 </div>
+
+
+
+
+<!-- ----------Script-------------->
+
+<script>
+    var tablinks = document.getElementsByClassName("tab-links");
+    var tabcontents = document.getElementsByClassName("tab-contents");
+
+    function opentab(tabname){
+        for(tablink of tablinks){
+            tablink.classList.remove("active-link");
+        }
+        for(tabcontent of tabcontents){
+            tabcontent.classList.remove("active-tab");
+        }
+        event.currentTarget.classList.add("active-link");
+        document.getElementById(tabname).classList.add("active-tab");
+    }
+</script>
+
+<!-- ---------Script for side menu in phone ----------->
+
+<script>
+    var sidemenu = document.getElementById("sidemenu");
+    function openmenu(){
+        sidemenu.style.right = "0";
+    }
+    function closemenu(){
+        sidemenu.style.right = "-200px";
+    }
+</script>
+
+
+
+
 
     
 </body>
