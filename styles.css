@@ -17,9 +17,11 @@ body{
 #header{
     width: 100%;
     height: 100vh; 
-    background-image: url(Pics/ProfilePic.jpg);
-    background-size: cover;
+    background-image: url(Pics/justpic.png);
+    background-size: auto 100%;
     background-position: right;
+    background-color: #D7C6C2;
+    background-repeat: no-repeat;
 }
 
 .container{
@@ -47,6 +49,7 @@ nav ul li a{
     color: #080808;
     text-decoration: none;
     font-size: 18px;
+    font-weight: bold;
     position: relative;    
 }
 
@@ -54,7 +57,7 @@ nav ul li a::after{
     content: '';
     width: 0;
     height: 3px;
-    background: #ff004f;
+    background: #754C39;
     position: absolute;
     left: 0;
     bottom: -6px;
@@ -66,7 +69,8 @@ nav ul li a:hover::after{
 }
 
 .header-text{
-    margin-top: 20%;
+    margin-top: 16%;
+    margin-left: 10%;
     font-size: 30px;
 }
 
@@ -76,7 +80,44 @@ nav ul li a:hover::after{
 }
 
 .header-text h1 span{
-    color:#ff004f;
+    color:#754C39;
+}
+
+.header-social-icons{
+    margin-top: 90px;
+    margin-left: 20%;
+}
+
+.header-social-icons a{
+    text-decoration: none;
+    font-size: 30px;
+    margin-right: 50px;
+    color: #080808;
+    display: inline-block;
+    transition: transform 0.5s;
+}
+
+.header-social-icons a:hover{
+    transform: scale(1.5);
+}
+
+.header-social-icons a:last-child {
+    margin-right: 0; 
+} 
+
+.btn.header-btn4 {
+    display: inline-block;
+    background: #754C39;
+    margin-left: 22%;
+    color: #fff;
+    padding: 14px 60px;
+    border: none;
+}
+
+.btn.header-btn4:hover {
+    background: #754C39; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transform: scale(1.03);
 }
 
 
@@ -109,7 +150,7 @@ nav ul li a:hover::after{
 .sub-title{
     font-size: 60px ;
     font-weight: 600;
-    color: aliceblue;
+    color: #D9DEDE;
 }
 
 .tab-titles{
@@ -129,7 +170,7 @@ nav ul li a:hover::after{
     content: '';
     width: 0;
     height: 3px;
-    background: #ff004f;
+    background: #754C39;
     position: absolute;
     left: 0;
     bottom: -8px;
@@ -146,7 +187,7 @@ nav ul li a:hover::after{
 }
 
 .tab-contents ul li span{
-    color: #ff004f;
+    color: #754C39;
     font-size: 14px;
 }
 
