@@ -125,7 +125,9 @@ nav ul li a:hover::after{
 
 #about{
     padding: 80px 0;
-    color: #252323;  
+    /* color: #252323;   */
+    color: #39393A;
+    background-color: #FFF;
 }
 
 .row{
@@ -150,7 +152,8 @@ nav ul li a:hover::after{
 .sub-title{
     font-size: 60px ;
     font-weight: 600;
-    color: #D9DEDE;
+    /* color: #D9DEDE; */
+    color: #354B5E;
 }
 
 .tab-titles{
@@ -164,6 +167,7 @@ nav ul li a:hover::after{
     font-weight: 500;
     cursor: pointer;
     position: relative;
+    color: #487A7B;
 }
 
 .tab-links::after{
@@ -187,7 +191,8 @@ nav ul li a:hover::after{
 }
 
 .tab-contents ul li span{
-    color: #754C39;
+    /* color: #754C39; */
+    color: #487A7B;
     font-size: 14px;
 }
 
@@ -209,7 +214,7 @@ nav ul li a:hover::after{
 
 .services-list{
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250p, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     grid-gap: 40px;
     margin-top: 50px;
 }
@@ -256,7 +261,7 @@ nav ul li a:hover::after{
 }
 
 .work-list{
-    display: gird;
+    display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     grid-gap: 40px;
     margin-top: 50px;
@@ -270,7 +275,7 @@ nav ul li a:hover::after{
 }
 
 .work img{
-    width: 60%;
+    width: 100%;
     border-radius: 10px;
     display: block;
     transition: transform 0.5s;
@@ -278,7 +283,7 @@ nav ul li a:hover::after{
 
 
 .layer{
-    width: 60%;
+    width: 100%;
     height: 0%;
     background: linear-gradient(rgba(0,0,0,0.6), #ff004f);
     border-radius: 10px;
@@ -289,7 +294,7 @@ nav ul li a:hover::after{
     display: flex;
     align-items: center;
     justify-content: center;
-    flex-direction: coloumn;
+    flex-direction: column;
     padding: 0 40px;
     text-align: center;
     font-size: 14px;
