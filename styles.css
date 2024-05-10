@@ -196,6 +196,53 @@ nav ul li a:hover::after{
     font-size: 14px;
 }
 
+.tab-contents ul li .date-line {
+    display: flex;
+    justify-content: space-between;
+    width: 100%; 
+}
+
+.tab-contents ul li .organization {
+    font-size: 16px;
+    font-weight: bold;
+    text-align: left;
+    flex-grow: 1; 
+}
+
+.tab-contents ul li .date {
+    font-size: 16px;
+    font-weight: bold;
+    text-align: right;
+    flex-grow: 0; 
+}
+
+.tab-contents ul li .title-location {
+    display: flex;
+    justify-content: space-between;
+    width: 100%; 
+}
+
+.tab-contents ul li .job-title {
+    font-size: 15px;
+    font-weight: bold;
+    text-align: left;
+    flex-grow: 1; 
+}
+
+.tab-contents ul li .location {
+    font-size: 15px;
+    font-weight: bold;
+    text-align: right;
+    flex-grow: 0; 
+}
+
+
+
+.tab-contents ul li .sub-span {
+    color: #487A7B; 
+    font-size: 14px; 
+}
+
 .tab-contents {
     display: none;
 }
