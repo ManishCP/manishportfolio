@@ -127,7 +127,7 @@ nav ul li a:hover::after{
     padding: 80px 0;
     /* color: #252323;   */
     color: #39393A;
-    background-color: #FFF;
+    background-color: #F2F2F2;
 }
 
 .row{
@@ -305,6 +305,7 @@ nav ul li a:hover::after{
 
 #portfolio{
     padding: 50px 0;
+    transition: all 0.5s ease-in-out;
 }
 
 .work-list{
@@ -313,7 +314,6 @@ nav ul li a:hover::after{
     grid-gap: 40px;
     margin-top: 50px;
 }
-
 
 .work {
     border-radius: 10px;
@@ -327,7 +327,6 @@ nav ul li a:hover::after{
     display: block;
     transition: transform 0.5s;
 }
-
 
 .layer{
     width: 100%;
@@ -388,8 +387,8 @@ nav ul li a:hover::after{
 
 .btn:hover{
     background: #ff004f;
-
 }
+
 
 
 /* -------contact--------- */
