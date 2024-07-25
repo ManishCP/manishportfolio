@@ -34,8 +34,8 @@ document.addEventListener('DOMContentLoaded', function() {
             {
                 title: "Hostel Directory",
                 description: "The Hostel Directory Management System is a desktop application developed using WPF (Windows Presentation Foundation) and MVVM (Model-View-ViewModel) architecture.",
-                imgSrc: "https://github.com/ManishCP/HostelDirectory",
-                link: "Pics/HostelDirectory.png"                
+                imgSrc: "Pics/HostelDirectory.png",
+                link: "https://github.com/ManishCP/HostelDirectory"                
             },
             {
                 title: "Course Registration",
@@ -94,17 +94,22 @@ document.addEventListener('DOMContentLoaded', function() {
             const workDiv = document.createElement('div');
             workDiv.className = 'work';
             workDiv.innerHTML = `
-                <img src="${work.imgSrc}">
-                <div class="layer">
+                <div class="img-container">
+                    <img src="${work.imgSrc}" alt="${work.title}">
+                    <a href="${work.link}" class="link" target="_blank"><i class="fas fa-external-link-alt"></i></a>
+                </div>
+                <div class="description">
                     <h3>${work.title}</h3>
                     <p>${work.description}</p>
-                    <a href="${work.link}"><i class="fas fa-external-link-alt"></i></a>
                 </div>
             `;
             workList.appendChild(workDiv);
         });
         document.getElementById('portfolio').style.display = 'block';
     }
+
+
+
 
     // Event listeners for service links
     document.getElementById('full-stack-link').addEventListener('click', function(event) {
@@ -122,44 +127,32 @@ document.addEventListener('DOMContentLoaded', function() {
         populatePortfolio(portfolios.publication);
     });
 
+    document.getElementById('contactForm').addEventListener('submit', function(event) {
+        event.preventDefault(); // Prevent the form from submitting normally
+
+        var name = document.getElementsByName('name')[0].value;
+        var email = document.getElementsByName('email')[0].value;
+        var message = document.getElementsByName('message')[0].value;
+
+        // Call the sendEmail function with the form data
+        sendEmail(name, email, message);
+    });
+
+    // Function to send email from contact form
+    function sendEmail(name, email, message) {
+        Email.send({
+            Host: "smtp.gmail.com",
+            Username: "", // Replace with your email address
+            Password: "", // Replace with your email password or use OAuth
+            To: "", // Replace with your email address
+            From: email, // Use the user's email as the From address
+            Subject: "Portfolio Contact Form Submission from " + name,
+            Body: "Name: " + name + "<br>Email: " + email + "<br>Message: " + message
+        })
+        .then(function(message) {
+            alert("Your message has been sent successfully!");
+            document.getElementById("contactForm").reset(); // Clear the form after sending
+        });
+    }
+
 });
-
-// document.addEventListener('DOMContentLoaded', function() {
-    
-
-//     // Function to populate portfolio section
-//     function populatePortfolio(portfolio) {
-//         const workList = document.getElementById('work-list');
-//         workList.innerHTML = ''; // Clear existing content
-//         portfolio.forEach(work => {
-//             const workDiv = document.createElement('div');
-//             workDiv.className = 'work';
-//             workDiv.innerHTML = `
-//                 <img src="${work.imgSrc}">
-//                 <div class="layer">
-//                     <h3>${work.title}</h3>
-//                     <p>${work.description}</p>
-//                     <a href="${work.link}"><i class="fas fa-external-link-alt"></i></a>
-//                 </div>
-//             `;
-//             workList.appendChild(workDiv);
-//         });
-//         document.getElementById('portfolio').style.display = 'block';
-//     }
-
-//     // Event listeners for service links
-//     document.getElementById('full-stack-link').addEventListener('click', function(event) {
-//         event.preventDefault();
-//         populatePortfolio(portfolios.webDesign);
-//     });
-
-//     document.getElementById('ui-ux-design-link').addEventListener('click', function(event) {
-//         event.preventDefault();
-//         populatePortfolio(portfolios.uiUxDesign);
-//     });
-
-//     document.getElementById('publication-linkk').addEventListener('click', function(event) {
-//         event.preventDefault();
-//         populatePortfolio(portfolios.backendDevelopment);
-//     });
-// });

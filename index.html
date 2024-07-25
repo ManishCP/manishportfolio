@@ -7,6 +7,7 @@
     <title>Person Portfolio Website</title>
     <link rel="Stylesheet" href="styles.css">
     <script src="https://kit.fontawesome.com/875f64cf71.js" crossorigin="anonymous"></script>
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
 </head>
 <body>
     <div id="header">
@@ -181,10 +182,10 @@
                 <a href="Docs/ManishCP_FullStackDeveloper.pdf"  download class="btn btn2">Download CV</a>
             </div>
             <div class="contact-right">
-                <form>
-                    <input type="text" name="Name" placeholder="Your Name" required>
+                <form id="contactForm" method="post">
+                    <input type="text" name="name" placeholder="Your Name" required>
                     <input type="email" name="email" placeholder="Your Email" required>
-                    <textarea name="Message" rows = "6" placeholder="Your Message"></textarea>
+                    <textarea name="message" rows="6" placeholder="Your Message" required></textarea>
                     <button type="submit" class="btn btn2">Submit</button>
                 </form>
             </div>
