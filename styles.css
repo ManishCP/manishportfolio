@@ -1,7 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&display=swap');
+
 *{
     margin: 0;
     padding: 0;
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Merriweather', serif;
     box-sizing: border-box;
 }
 
@@ -69,7 +71,7 @@ nav ul li a:hover::after{
 }
 
 .header-text{
-    margin-top: 16%;
+    margin-top: 10%;
     margin-left: 10%;
     font-size: 30px;
 }
@@ -83,9 +85,21 @@ nav ul li a:hover::after{
     color:#754C39;
 }
 
+.header-text h2 em {
+    font-family: 'Alegreya', serif;
+    font-style: italic;
+    font-size: 35px; 
+    margin-left: 8%;
+    line-height: 1.5;
+    color: #4c4c4c;
+    display: block;
+    margin-top: 30px;
+}
+
+
 .header-social-icons{
-    margin-top: 90px;
-    margin-left: 20%;
+    margin-top: 60px;
+    margin-left: 23%;
 }
 
 .header-social-icons a{
@@ -121,47 +135,55 @@ nav ul li a:hover::after{
 }
 
 
+
 /* ----------about------------- */
 
-#about{
+#about {
     padding: 80px 0;
-    /* color: #252323;   */
     color: #39393A;
     background-color: #F2F2F2;
 }
 
-.row{
+.about-container {
+    background-color: #FFFFFF; /* Inner box color */
+    border-radius: 15px; /* Rounded corners for inner box */
+    padding: 40px;
+    margin: 0 auto; /* Center the container */
+    max-width: 1200px; /* Adjust the max-width as needed */
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1); /* Shadow for inner box */
+}
+
+.row {
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
 }
-.about-col-1{
+
+.about-col-1 {
     flex-basis: 35%;
 }
 
-.about-col-1 img{
+.about-col-1 img {
     width: 100%;
     border-radius: 15px;
 }
 
-.about-col-2{
+.about-col-2 {
     flex-basis: 60%;
-
 }
 
-.sub-title{
-    font-size: 60px ;
+.sub-title {
+    font-size: 60px;
     font-weight: 600;
-    /* color: #D9DEDE; */
     color: #354B5E;
 }
 
-.tab-titles{
+.tab-titles {
     display: flex;
     margin: 20px 0 40px;
 }
 
-.tab-links{
+.tab-links {
     margin-right: 50px;
     font-size: 18px;
     font-weight: 500;
@@ -170,7 +192,7 @@ nav ul li a:hover::after{
     color: #487A7B;
 }
 
-.tab-links::after{
+.tab-links::after {
     content: '';
     width: 0;
     height: 3px;
@@ -181,17 +203,17 @@ nav ul li a:hover::after{
     transition: 0.5s;
 }
 
-.tab-links.active-link::after{
+.tab-links.active-link::after {
     width: 50%;
 }
 
-.tab-contents ul li{
+
+.tab-contents ul li {
     list-style: none;
-    margin:10px 0;
+    margin: 10px 0;
 }
 
-.tab-contents ul li span{
-    /* color: #754C39; */
+.tab-contents ul li span {
     color: #487A7B;
     font-size: 14px;
 }
@@ -199,48 +221,83 @@ nav ul li a:hover::after{
 .tab-contents ul li .date-line {
     display: flex;
     justify-content: space-between;
-    width: 100%; 
+    width: 100%;
 }
 
+.skills-list {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px; /* Reduced gap between columns */
+}
+
+.skills-list li {
+    padding: 8px; /* Reduced padding for each item */
+    background-color: #fff; /* White background for list items */
+    border-radius: 6px; /* Slightly rounded corners */
+    border: 1px solid #ddd; /* Border for list items */
+    font-size: 14px; /* Reduced font size */
+    line-height: 1.2;
+}
+
+.skills-list li b {
+    font-weight: bold;
+    font-size: 15px; /* Adjusted size for bold text */
+}
+
+.skills-list li.full-width {
+    grid-column: span 2; /* Makes this item span across both columns */
+}
+
+.skills-list li span {
+    display: block;
+    font-weight: bold;
+    font-size: 16px; /* Consistent font size */
+    color: #354B5E; /* Heading color */
+    margin-bottom: 1px; /* Space between heading and subheading */
+}
+
+.skills-list li p {
+    margin: 0; /* Remove default margin */
+    font-size: 14px; /* Font size for readability */
+    color: #39393A; /* Text color */
+}
 .tab-contents ul li .organization {
     font-size: 16px;
     font-weight: bold;
     text-align: left;
-    flex-grow: 1; 
+    flex-grow: 1;
 }
 
 .tab-contents ul li .date {
     font-size: 16px;
     font-weight: bold;
     text-align: right;
-    flex-grow: 0; 
+    flex-grow: 0;
 }
 
 .tab-contents ul li .title-location {
     display: flex;
     justify-content: space-between;
-    width: 100%; 
+    width: 100%;
 }
 
 .tab-contents ul li .job-title {
     font-size: 15px;
     font-weight: bold;
     text-align: left;
-    flex-grow: 1; 
+    flex-grow: 1;
 }
 
 .tab-contents ul li .location {
     font-size: 15px;
     font-weight: bold;
     text-align: right;
-    flex-grow: 0; 
+    flex-grow: 0;
 }
 
-
-
 .tab-contents ul li .sub-span {
-    color: #487A7B; 
-    font-size: 14px; 
+    color: #487A7B;
+    font-size: 14px;
 }
 
 .tab-contents {
@@ -250,6 +307,7 @@ nav ul li a:hover::after{
 .tab-contents.active-tab {
     display: block;
 }
+
 
 
 
@@ -563,6 +621,11 @@ nav .fas{
     .copyright{
         font-size: 14px;
     }
+
+    .skills-list {
+        grid-template-columns: 1fr; /* Single column layout for small screens */
+    }
+
 
 
     
