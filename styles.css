@@ -141,7 +141,7 @@ nav ul li a:hover::after{
 #about {
     padding: 80px 0;
     color: #39393A;
-    background-color: #F2F2F2;
+    background-color: #D7C6C2;
 }
 
 .about-container {
@@ -359,9 +359,8 @@ nav ul li a:hover::after{
 
 
 
-/* ----------portfolio------------ */
 
-/* ----------portfolio------------ */
+ /* ----------portfolio------------ */
 
 #portfolio {
     padding: 50px 0;
@@ -369,20 +368,25 @@ nav ul li a:hover::after{
 }
 
 #work-list {
+    width: 80%;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 10px;
+    gap: 20px;
+    padding: 10px;
 }
 
 .work {
-    box-sizing: border-box;
-    padding: 10px;
-    border: 1px solid #ddd;
-    border-radius: 4px;
-    background-color: #fff;
-    text-align: center;
+    background-color: #ddd;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    transition: transform 0.2s, height 0.2s;
     overflow: hidden;
     position: relative;
+}
+
+.work:hover {
+    transform: scale(1.05);
 }
 
 .img-container {
@@ -402,15 +406,13 @@ nav ul li a:hover::after{
 
 .link {
     position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    display: none;
-    font-size: 2em;
-    color: white;
-    background: rgba(0, 0, 0, 0.6);
+    top: 10px;
+    right: 10px;
+    font-size: 1.5em;
+    color: #007bff;
+    background-color: rgba(255, 255, 255, 0.8);
     border-radius: 50%;
-    padding: 10px;
+    padding: 5px;
 }
 
 .img-container:hover .link {
@@ -423,34 +425,66 @@ nav ul li a:hover::after{
 
 .description h3 {
     font-size: 1.2em;
-    margin: 0;
-    padding-bottom: 10px;
+    margin-bottom: 10px;
 }
 
 .description p {
     font-size: 1em;
-    margin: 0;
-    padding-bottom: 10px;
 }
 
-.description a {
+.read-more {
     color: #007bff;
-    text-decoration: none;
+    cursor: pointer;
 }
 
-.description a:hover {
-    text-decoration: underline;
+.description p:last-child {
+    font-weight: bold;
+    color: #754C39;
 }
 
-.work:hover img {
-    transform: scale(1.1);
+/* ------------ buttons and project ------------ */
+
+.portfolio-container {
+    display: flex;
 }
+
+.filter-buttons {
+    width: 20%;
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    background-color: #D7C6C2;
+}
+
+.filter-btn {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+    padding: 10px;
+    background-color: #ddd;
+    border-radius: 10px;
+    border: none;
+    cursor: pointer;
+}
+
+.filter-btn i {
+    margin-left: auto; /* Ensures icon is on the right */
+}
+
+.filter-btn:hover, .filter-btn.active {
+   background-color:#754C39; 
+   color:white; 
+}
+
+/*--------need to fix-----*/
 
 .btn {
     display: block;
     margin: 50px auto;
     width: fit-content;
     border: 1px solid #ff004f;
+    background: #754C39; 
     padding: 14px 50px;
     border-radius: 6px;
     text-decoration: none;
@@ -459,11 +493,23 @@ nav ul li a:hover::after{
 }
 
 .btn:hover {
-    background: #ff004f;
+    background: #754C39; 
+} 
+
+.btn.header-btn4 {
+    display: inline-block;
+    background: #754C39;
+    margin-left: 22%;
+    color: #fff;
+    padding: 14px 60px;
+    border: none;
 }
 
-
-
+.btn.header-btn4:hover {
+    background: #754C39; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transform: scale(1.03);
+}
 
 /* -------contact--------- */
 

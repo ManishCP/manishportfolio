@@ -17,8 +17,7 @@
                 <ul id="sidemenu">
                     <li><a href="#header">Home</a></li>
                     <li><a href="#about">About</a></li>
-                    <li><a href="#services">Services</a></li>
-                    <li><a href="#portfolio">Portfolio</a></li>
+                    <li><a href="#myWork">Portfolio</a></li>
                     <li><a href="#contact">Contact</a></li>
                     <i class="fas fa-times" onclick="closemenu()"></i>
                 </ul>
@@ -129,49 +128,59 @@
 
 
 
-    <!-- ---------------services---------------->
+    <!-- ---------------services-------------- -->
 
-    <div id="services">
+    <!-- <div id="services">
         <div class="container">
             <h1 class="sub-title">My Work</h1>
             <div class="services-list">
                 <div>
                     <i class="fas fa-code"></i>
-                    <h2>Full Stack Projects</h2>
-                    <p>This is what I am passionate about check out my projects and how 
-                        I've applied my skills in it </p>
+                    <h2>Full-Stack Development</h2>
                     <a href="#" id="full-stack-link"> View Projects</a>
-                </div>
-                <div>
-                    <i class="fas fa-crop-alt"></i>
-                    <h2>UI/UX Design</h2>
-                    <p>This is my work in UI/UX Design</p>
-                    <a href="#" id="ui-ux-design-link">Learn more</a>
-                </div>
-                <div>
-                    <i class="fas fa-book"></i>
-                    <h2>Publications</h2>
-                    <p>My work of publications</p>
-                    <a href="#" id="publication-link">Learn more</a>
                 </div>
             </div>
         </div>
-    </div>
+    </div>  -->
 
 <!-- --------------portfolio------------------ -->
 
-
-    <div id="portfolio" style="display: none;">
-        <div class="container">
-            <h1 class="sub-title">My Work</h1>
-            <div class="work-list" id="work-list">
-                <!-- Dynamic Content will be inserted here-->
+<div id="myWork">
+    <div class="container">
+        <h1 class="sub-title">My Work</h1>
+        <div class="portfolio-container">
+            <div class="filter-buttons">
+                <button class="filter-btn" data-category="all">
+                All <i class="fas fa-code"></i>
+                </button>
+                <button class="filter-btn" data-category="fullStackDevelopment">
+                    Full Stack Development <i class="fas fa-paint-brush"></i>
+                </button>
+                <button class="filter-btn" data-category="backendDevelopment">
+                    Backend Development <i class="fas fa-paint-brush"></i>
+                </button>
+                <button class="filter-btn" data-category="frontendDevelopment">
+                    Frontend Development <i class="fas fa-paint-brush"></i>
+                </button>
+                <button class="filter-btn" data-category="desktopApplicationDevelopment">
+                    Desktop Application Development <i class="fas fa-paint-brush"></i>
+                </button>
+                <button class="filter-btn" data-category="dataScience">
+                    Data Science and Machine Learning <i class="fas fa-paint-brush"></i>
+                </button>
+                <button class="filter-btn" data-category="uiUxDesign">
+                UI/UX Design <i class="fas fa-pencil-alt"></i>
+                </button>
+                <button class="filter-btn" data-category="publication">
+                Publication <i class="fas fa-book"></i>
+                </button>
             </div>
-            <a href="#" class="btn">See More</a>
+            <div id="work-list">
+            <!-- Project tiles will be dynamically inserted here -->
+            </div>
         </div>
     </div>
-    
-
+</div> 
 
 <!-- ------------ contact ------------->
 
