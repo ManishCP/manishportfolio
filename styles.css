@@ -354,7 +354,7 @@ body {
   left: 0;
   bottom: 0;
   width: 200%;
-  animation: filmRollHorizontalContinuous 25s linear infinite;
+  animation: filmRollHorizontalContinuous 20s linear infinite;
   display: flex;
   align-items: center;
   gap: 20px;
@@ -363,7 +363,7 @@ body {
 
 .gallery-photo-horizontal {
   width: 140px;
-  height: 85px; /* Increased from 70px to 85px */
+  height: 85px;
   border-radius: 6px;
   overflow: hidden;
   box-shadow: 0 4px 12px rgba(120, 113, 108, 0.4);
@@ -406,12 +406,6 @@ body {
   margin-left: 20px;
 }
 .photo-h-10 {
-  margin-left: 20px;
-}
-.photo-h-11 {
-  margin-left: 20px;
-}
-.photo-h-12 {
   margin-left: 20px;
 }
 
@@ -501,13 +495,13 @@ body {
   top: 0;
   right: 5px;
   height: 200%;
-  animation: filmRollVerticalContinuous 24s linear infinite;
+  animation: filmRollVerticalContinuous 20s linear infinite;
 }
 
 .gallery-photo {
   position: absolute;
   width: calc(100% - 10px);
-  height: 200px; /* Increased from 170px to 200px */
+  height: 200px;
   border-radius: 6px;
   overflow: hidden;
   box-shadow: 0 4px 12px rgba(120, 113, 108, 0.4);
@@ -521,7 +515,7 @@ body {
   object-fit: cover;
 }
 
-/* First set of photos */
+/* First set of photos - 5 photos */
 .photo-1 {
   top: 10px;
 }
@@ -537,11 +531,11 @@ body {
 .photo-5 {
   top: 850px;
 }
+
+/* Second set (duplicates) positioned for seamless loop */
 .photo-6 {
   top: 1060px;
 }
-
-/* Second set (duplicates) positioned for seamless loop */
 .photo-7 {
   top: 1270px;
 }
@@ -553,12 +547,6 @@ body {
 }
 .photo-10 {
   top: 1900px;
-}
-.photo-11 {
-  top: 2110px;
-}
-.photo-12 {
-  top: 2320px;
 }
 
 @keyframes filmRollVerticalContinuous {
