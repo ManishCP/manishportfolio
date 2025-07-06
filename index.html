@@ -2,218 +2,496 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Person Portfolio Website</title>
-    <link rel="Stylesheet" href="styles.css">
-    <script src="https://kit.fontawesome.com/875f64cf71.js" crossorigin="anonymous"></script>
-    <script src="https://smtpjs.com/v3/smtp.js"></script>
+    <title>Manish CP - Software Engineer Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
-    <div id="header">
-        <div id="container">
-            <nav>
-                <img src="Pics/Logo.png" class="Logo">
-                <ul id="sidemenu">
-                    <li><a href="#header">Home</a></li>
-                    <li><a href="#about">About</a></li>
-                    <li><a href="#myWork">Portfolio</a></li>
-                    <li><a href="#contact">Contact</a></li>
-                    <i class="fas fa-times" onclick="closemenu()"></i>
+    <!-- Scroll Progress Bar -->
+    <div class="scroll-progress"></div>
+
+    <!-- Header Section -->
+    <header id="header" class="header-section">
+        <!-- Background Pattern -->
+        <div class="bg-pattern"></div>
+        
+        <!-- Navigation -->
+        <nav class="navbar">
+            <div class="nav-container">
+                <!-- Logo -->
+                <div class="logo-container">
+                    <h1 class="logo-text">MCP</h1>
+                </div>
+
+                <!-- Desktop Navigation -->
+                <ul class="nav-menu" id="nav-menu">
+                    <li><a href="#header" class="nav-link">Home</a></li>
+                    <li><a href="#about" class="nav-link">About</a></li>
+                    <li><a href="#portfolio" class="nav-link">Portfolio</a></li>
+                    <li><a href="#contact" class="nav-link">Contact</a></li>
                 </ul>
-                <i class="fas fa-bars" onclick="openmenu()"></i>
-            </nav>
-            <div class="header-text">
-                <p>Software Engineer</p>
-                <h1>Hi, I am <span>Manish CP</span><br> </h1>
-                <h2><em>"Don't just make things,<br> &nbsp &nbsp make things better!"</em></h2>
-            </div>
-            <div class="header-social-icons">
-                <a href="https://www.linkedin.com/in/manishcp/"><i class="fab fa-linkedin"></i></a>
-                <a href="https://github.com/ManishCP"><i class="fab fa-github"></i></a>
-                <a href="https://devpost.com/manishcp77?ref_content=user-portfolio&ref_feature=portfolio&ref_medium=global-nav"><i class="fa-brands fa-dev"></i></a>
-            </div>
-            <a href="Docs/ManishCP_FullStackDeveloper.pdf"  download class="btn header-btn4">Download CV</a>
-        </div>
-    </div>
 
-    <!-- -------------- about----------------- -->
-    <div id="about">
-        <div class="about-container">
-            <div class="row">
-                <div class="about-col-1">
-                    <img src="https://user-images.githubusercontent.com/74038190/212748842-9fcbad5b-6173-4175-8a61-521f3dbb7514.gif">
+                <!-- Social Icons - Made More Prominent -->
+                <div class="social-icons-nav">
+                    <a href="https://www.linkedin.com/in/manishcp/" target="_blank" class="social-icon" title="LinkedIn">
+                        <i class="fab fa-linkedin"></i>
+                    </a>
+                    <a href="https://github.com/ManishCP" target="_blank" class="social-icon" title="GitHub">
+                        <i class="fab fa-github"></i>
+                    </a>
+                    <a href="https://devpost.com/manishcp77?ref_content=user-portfolio&ref_feature=portfolio&ref_medium=global-nav" target="_blank" class="social-icon" title="DevPost">
+                        <i class="fas fa-code"></i>
+                    </a>
                 </div>
-                <div class="about-col-2">
-                    <h1 class="sub-title">About Me:</h1>
-                    <p>
-                        Hello! 👋 I'm a recent Computer Science graduate stepping into the role of a
-                        <b>Software Engineer</b>, with a strong focus on Java and Python. I bring practical 
-                        experience from developing scalable backend solutions and optimizing system
-                        performance during my internships. My problem-solving skills are sharp, and
-                        my commitment to delivering impactful software solutions is unwavering. 
-                        I’m constantly seeking ways to enhance my skills and create user-friendly, 
-                        efficient applications. Let’s chat—my puns are almost as developed as my programs! 😁</p>
 
-                        <div class="tab-titles">
-                            <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
-                            <p class="tab-links" onclick="opentab('experience')">Experience</p>
-                            <p class="tab-links" onclick="opentab('education')">Education</p>
-                        </div>
-                        <div class="tab-contents active-tab" id="skills">
-                            <ul class="skills-list">
-                                <li><span>Programming Languages</span><br>Java, Python, JavaScript, TypeScript, C#</li>
-                                <li><span>Frontend Dev</span><br>HTML, CSS, React, AJAX, Bootstrap, jQuery</li>
-                                <li><span>Design</span><br>Figma</li>
-                                <li><span>Data Visualization</span><br>Chartjs, D3js, CanvasJS</li>
-                                <li><span>Backend Dev</span><br>Spring Boot, MVC, Servlets, JSP, NodeJS, Flask, RESTful APIs, ASP.NET, WPF</li>
-                                <li><span>Database & ORM:</span><br>SQL, Hibernate, MySQL, MongoDB</li>
-                                <li><span>Automated Testing:</span><br>Jest, Selenium</li>
-                                <li class="full-width"><span>Certifications</span><br> AWS Certified Cloud Practitioner (Nov ’22 – Nov ‘25)</li>     
-                            </ul>
-                        </div>
-                        <div class="tab-contents" id="experience">
-                            <ul>
-                                <li>
-                                    <div class="date-line">
-                                        <span class="organization">Indian Space Research Organisation – (ISRO–ISTRAC)</span>
-                                        <span class="date">Jan 2023 – May 2023</span>
-                                    </div>
-                                </li>
-                                <li>
-                                    <div class="title-location">
-                                        <span class="job-title">Software Engineer (Project Trainee)</span>
-                                        <span class="location">Bengaluru, KA, India</span>
-                                    </div>
-                                </li>
-                                <li>• Collaborated with a multidisciplinary team of scientists and engineers, in the development of 
-                                     a cutting-edge debris tracking model utilizing <b>MATLAB</b>, aimed at enhancing space debris monitoring</li>
-                                <li>• Applied advanced algorithms to process data from ground-based radar systems to assess pass success and coverage by adjusting time
-                                    and azimuth limits, contributing to the organization’s space situational awareness initiatives</li><br>
-                                <li>
-                                    <div class="date-line">
-                                        <span class="organization">Papersdrop (VIT incubator)</span>
-                                        <span class="date">Apr 2022 – Nov 2022</span>
-                                    </div>
-                                </li>
-                                <li>
-                                    <div class="title-location">
-                                        <span class="job-title">Full Stack Development Intern</span>
-                                        <span class="location">Vellore, TN, India</span>
-                                    </div>
-                                </li>
-                                <li>• Implemented an internal blogging platform within VIT, integrating optimizations for blog search, 
-                                      pagination, login authentication, and SEO strategies to elevate platform visibility and enhance user experience. </li>
-                                <li>• Utilized <b>Flask</b> to create <b>CRUD APIs</b> operations, integrating MongoDB database for efficient data management
-                                    , and contributed to designing UI pages using <b>React</b>, ensuring a seamless and visually appealing blogging 
-                                    platform</li>
-                            </ul>
-                        </div>
-                        <div class="tab-contents" id="education">
-                            <ul>
-                                <li><span class="organization">Northeastern University Expected May 2025</span></li>
-                                <li><span class="job-title">Master of Science in Software Engineering Systems</span></li>
-                                <li>• Program Structures and Algorithms, Enterprise Software Design, Object Oriented Design in Java, User Experience Design and Testing, 
-                                    Web Development, Prompt Engineering and AI </li>
-                                <li><span class="organization">Vellore Institute of Technology, May 2023</span></li>
-                                <li><li><span class="job-title">Bachelor of Engineering in Computer Science and Business Systems</span></li>
-                                <li>• Data Structures and Algorithms, Computer Architecture, Data Science, Operating Systems, Cloud
-                                    Microservices and Container Technologies, Software Development(Agile), Financial Management, Distributed Systems</li>
-                            </ul>
-                        </div>
+                <!-- Mobile Menu Button -->
+                <div class="hamburger" id="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </nav>
+
+        <!-- Hero Content -->
+        <div class="hero-content">
+            <div class="hero-text">
+                <h1 class="hero-title">
+                    Hi, I am <span class="highlight">Manish CP</span>
+                </h1>
+                <blockquote class="hero-quote">
+                    A software developer driven by curiosity, powered by coffee, 
+                    who loves a good book, a thoughtful hike, and even better — design discussions.
+                </blockquote>
+                <a href="Docs/ManishCP_FullStackDeveloper.pdf" download class="cta-button">
+                    <i class="fas fa-download"></i>
+                    Download CV
+                </a>
+            </div>
+            <div class="hero-image">
+                <div class="image-container">
+                    <img src="Pics/justpic.png" alt="Manish CP" class="profile-image">
+                    <div class="floating-element element-1"></div>
+                    <div class="floating-element element-2"></div>
                 </div>
             </div>
         </div>
-    </div>
+    </header>
 
-
-
-    <!-- ---------------services-------------- -->
-
-    <!-- <div id="services">
+    <!-- About Section -->
+    <section id="about" class="about-section">
         <div class="container">
-            <h1 class="sub-title">My Work</h1>
-            <div class="services-list">
-                <div>
-                    <i class="fas fa-code"></i>
-                    <h2>Full-Stack Development</h2>
-                    <a href="#" id="full-stack-link"> View Projects</a>
+            <h2 class="section-title">About Me:</h2>
+            
+            <!-- Mobile Film Reel (Horizontal) -->
+            <div class="film-reel-mobile">
+                <div class="film-strip-horizontal">
+                    <div class="film-hole"></div>
+                    <div class="film-hole"></div>
+                    <div class="film-hole"></div>
+                    <div class="film-hole"></div>
+                    <div class="film-hole"></div>
+                    <div class="film-hole"></div>
+                    <div class="film-hole"></div>
+                    <div class="film-hole"></div>
+                </div>
+                
+                <div class="gallery-photos-horizontal">
+                    <!-- First set of photos -->
+                    <div class="gallery-photo-horizontal photo-h-1">
+                        <img src="Pics/ReelGallery/bg_headshot.jpeg" alt="Professional Headshot">
+                    </div>
+                    <div class="gallery-photo-horizontal photo-h-2">
+                        <img src="Pics/ReelGallery/bg_team.jpeg" alt="Team Photo">
+                    </div>
+                    <div class="gallery-photo-horizontal photo-h-3">
+                        <img src="Pics/ReelGallery/presentation_team.jpeg" alt="Presentation">
+                    </div>
+                    <div class="gallery-photo-horizontal photo-h-4">
+                        <img src="Pics/ReelGallery/bg_office.jpeg" alt="Office Environment">
+                    </div>
+                    <div class="gallery-photo-horizontal photo-h-5">
+                        <img src="Pics/ReelGallery/northeastern.jpeg" alt="Northeastern University">
+                    </div>
+                    
+                    <!-- Duplicate set for seamless loop -->
+                    <div class="gallery-photo-horizontal photo-h-7">
+                        <img src="Pics/ReelGallery/bg_headshot.jpeg" alt="Professional Headshot">
+                    </div>
+                    <div class="gallery-photo-horizontal photo-h-8">
+                        <img src="Pics/ReelGallery/bg_team.jpeg" alt="Team Photo">
+                    </div>
+                    <div class="gallery-photo-horizontal photo-h-9">
+                        <img src="Pics/ReelGallery/presentation_team.jpeg" alt="Presentation">
+                    </div>
+                    <div class="gallery-photo-horizontal photo-h-10">
+                        <img src="Pics/ReelGallery/bg_office.jpeg" alt="Office Environment">
+                    </div>
+                    <div class="gallery-photo-horizontal photo-h-11">
+                        <img src="Pics/ReelGallery/northeastern.jpeg" alt="Northeastern University">
+                    </div>
+                </div>
+            </div>
+
+            <div class="about-card">
+                <div class="about-content">
+                    <div class="about-left">
+                        <!-- Vertical Film Reel Gallery (Desktop) -->
+                        <div class="film-reel-gallery">
+                            <div class="film-strip">
+                                <div class="film-hole"></div>
+                                <div class="film-hole"></div>
+                                <div class="film-hole"></div>
+                                <div class="film-hole"></div>
+                                <div class="film-hole"></div>
+                                <div class="film-hole"></div>
+                                <div class="film-hole"></div>
+                                <div class="film-hole"></div>
+                                <div class="film-hole"></div>
+                                <div class="film-hole"></div>
+                                <div class="film-hole"></div>
+                                <div class="film-hole"></div>
+                            </div>
+                            
+                            <div class="gallery-photos">
+                                <!-- First set of photos -->
+                                <div class="gallery-photo photo-1">
+                                    <img src="Pics/ReelGallery/bg_headshot.jpeg" alt="Professional Headshot">
+                                </div>
+                                <div class="gallery-photo photo-2">
+                                    <img src="Pics/ReelGallery/bg_team.jpeg" alt="Team Photo">
+                                </div>
+                                <div class="gallery-photo photo-3">
+                                    <img src="Pics/ReelGallery/presentation_team.jpeg" alt="Presentation">
+                                </div>
+                                <div class="gallery-photo photo-4">
+                                    <img src="Pics/ReelGallery/bg_office.jpeg" alt="Office Environment">
+                                </div>
+                                <div class="gallery-photo photo-5">
+                                    <img src="Pics/ReelGallery/northeastern.jpeg" alt="Northeastern University">
+                                </div>
+                                
+                                <!-- Duplicate set for seamless loop -->
+                                <div class="gallery-photo photo-7">
+                                    <img src="Pics/ReelGallery/bg_headshot.jpeg" alt="Professional Headshot">
+                                </div>
+                                <div class="gallery-photo photo-8">
+                                    <img src="Pics/ReelGallery/bg_team.jpeg" alt="Team Photo">
+                                </div>
+                                <div class="gallery-photo photo-9">
+                                    <img src="Pics/ReelGallery/presentation_team.jpeg" alt="Presentation">
+                                </div>
+                                <div class="gallery-photo photo-10">
+                                    <img src="Pics/ReelGallery/bg_office.jpeg" alt="Office Environment">
+                                </div>
+                                <div class="gallery-photo photo-11">
+                                    <img src="Pics/ReelGallery/northeastern.jpeg" alt="Northeastern University">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="about-right">
+                        <p class="about-description">
+                            From building real-time robotic interfaces at Berkshire Grey to optimizing radar data pipelines at ISRO, 
+                            I thrive at the intersection of innovation and execution. <br>
+                            Hello! 👋 I’m a <strong>Software Developer</strong> and graduate student at Northeastern University, 
+                            passionate about crafting clean, scalable, and impactful software.
+                            With expertise in modern web technologies, I work across dynamic UIs, asynchronous backends, 
+                            and cloud-native systems.
+                            I bring a builder’s mindset, deep curiosity, and focus on long-term value to everything I create.
+                        </p>
+
+                        <!-- Tab Navigation -->
+                        <div class="tab-navigation">
+                            <button class="tab-btn active" data-tab="skills">Skills</button>
+                            <button class="tab-btn" data-tab="experience">Experience</button>
+                            <button class="tab-btn" data-tab="education">Education</button>
+                        </div>
+
+                        <!-- Tab Content -->
+                        <div class="tab-content active" id="skills-tab">
+                            <div class="skills-grid">
+                                <div class="skill-category">
+                                    <h4>Programming Languages</h4>
+                                    <div class="skill-tags">
+                                        <span class="skill-tag">Java</span>
+                                        <span class="skill-tag">Python</span>
+                                        <span class="skill-tag">JavaScript</span>
+                                        <span class="skill-tag">TypeScript</span>
+                                        <span class="skill-tag">C#</span>
+                                    </div>
+                                </div>
+                                <div class="skill-category">
+                                    <h4>Frontend Dev</h4>
+                                    <div class="skill-tags">
+                                        <span class="skill-tag">HTML</span>
+                                        <span class="skill-tag">CSS</span>
+                                        <span class="skill-tag">React</span>
+                                        <span class="skill-tag">AJAX</span>
+                                        <span class="skill-tag">Bootstrap</span>
+                                        <span class="skill-tag">jQuery</span>
+                                    </div>
+                                </div>
+                                <div class="skill-category">
+                                    <h4>Backend Dev</h4>
+                                    <div class="skill-tags">
+                                        <span class="skill-tag">Spring Boot</span>
+                                        <span class="skill-tag">NodeJS</span>
+                                        <span class="skill-tag">Flask</span>
+                                        <span class="skill-tag">RESTful APIs</span>
+                                        <span class="skill-tag">ASP.NET</span>
+                                    </div>
+                                </div>
+                                <div class="skill-category">
+                                    <h4>Database & ORM</h4>
+                                    <div class="skill-tags">
+                                        <span class="skill-tag">SQL</span>
+                                        <span class="skill-tag">Hibernate</span>
+                                        <span class="skill-tag">MySQL</span>
+                                        <span class="skill-tag">MongoDB</span>
+                                    </div>
+                                </div>
+                                <div class="skill-category full-width">
+                                    <h4>Certifications</h4>
+                                    <div class="skill-tags">
+                                        <span class="skill-tag">AWS Certified Cloud Practitioner (Nov '22 – Nov '25)</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="tab-content" id="experience-tab">
+                            <div class="experience-item">
+                                <div class="experience-header">
+                                    <div class="header-left">
+                                        <img src="Pics/Logo/berkshire_grey_logo.jpeg" alt="Berkshire Grey Logo" class="company-logo">
+                                        <div class="header-content">
+                                            <h4>Berkshire Grey</h4>
+                                        </div>
+                                    </div>
+                                    <span class="date">Jan 2025 – June 2025</span>
+                                </div>
+                                <div class="experience-subheader">
+                                    <h5>Software Developer Co-op</h5>
+                                    <span class="location">Bedford, MA, USA</span>
+                                </div>
+                                <ul class="experience-points">
+                                    <li>Engineered dynamic UI and real-time backend features for BG’s robotic control system using React, Redux, and Python asyncio with gRPC—enabling adaptable layouts via YAML configs and real-time UI updates within a large-scale codebase.</li>
+                                    <li>Built robust test infrastructure and development workflows, authoring 50+ Pytest unit/integration tests with reusable fixtures, ensuring Py2/Py3 compatibility, integrating with Jenkins CI, and developing in a Dockerized Linux environment using ROS1/ROS2.</li>
+                                </ul>
+                            </div>
+                            <div class="experience-item">
+                                <div class="experience-header">
+                                    <div class="header-left">
+                                        <img src="Pics/Logo/ISRO_logo.jpeg" alt="ISRO Logo" class="company-logo">
+                                        <div class="header-content">
+                                            <h4>Indian Space Research Organisation – (ISRO–ISTRAC)</h4>
+                                        </div>
+                                    </div>
+                                    <span class="date">Jan 2023 – May 2023</span>
+                                </div>
+                                <div class="experience-subheader">
+                                    <h5>Software Engineer (Project Trainee)</h5>
+                                    <span class="location">Bengaluru, KA, India</span>
+                                </div>
+                                <ul class="experience-points">
+                                    <li>Collaborated with a multidisciplinary team of scientists and engineers, in the development of a cutting-edge debris tracking model utilizing <strong>MATLAB</strong>, aimed at enhancing space debris monitoring</li>
+                                    <li>Applied advanced algorithms to process data from ground-based radar systems to assess pass success and coverage by adjusting time and azimuth limits, contributing to the organization's space situational awareness initiatives</li>
+                                </ul>
+                            </div>
+                            <div class="experience-item">
+                                <div class="experience-header">
+                                    <div class="header-left">
+                                        <img src="Pics/Logo/vellore_institute_of_technology_logo.jpeg" alt="VIT Logo" class="company-logo">
+                                        <div class="header-content">
+                                            <h4>Papersdrop (VIT incubator)</h4>
+                                        </div>
+                                    </div>
+                                    <span class="date">Apr 2022 – Nov 2022</span>
+                                </div>
+                                <div class="experience-subheader">
+                                    <h5>Full Stack Development Intern</h5>
+                                    <span class="location">Vellore, TN, India</span>
+                                </div>
+                                <ul class="experience-points">
+                                    <li>Implemented an internal blogging platform within VIT, integrating optimizations for blog search, pagination, login authentication, and SEO strategies to elevate platform visibility and enhance user experience.</li>
+                                    <li>Utilized <strong>Flask</strong> to create <strong>CRUD APIs</strong> operations, integrating MongoDB database for efficient data management, and contributed to designing UI pages using <strong>React</strong>, ensuring a seamless and visually appealing blogging platform</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="tab-content" id="education-tab">
+                            <div class="education-item">
+                                <div class="education-header">
+                                    <div class="header-left">
+                                        <img src="Pics/Logo/northeastern_university_logo.jpeg" alt="Northeastern University Logo" class="university-logo">
+                                        <div class="header-content">
+                                            <h4>Northeastern University</h4>
+                                        </div>
+                                    </div>
+                                    <span class="date">Expected Dec 2025</span>
+                                </div>
+                                <h5>Master of Science in Software Engineering Systems</h5>
+                                <p>Program Structures and Algorithms, Enterprise Software Design, Object Oriented Design in Java, User Experience Design and Testing, Web Development, Prompt Engineering and AI</p>
+                            </div>
+                            <div class="education-item">
+                                <div class="education-header">
+                                    <div class="header-left">
+                                        <img src="Pics/Logo/vellore_institute_of_technology_logo.jpeg" alt="VIT Logo" class="university-logo">
+                                        <div class="header-content">
+                                            <h4>Vellore Institute of Technology</h4>
+                                        </div>
+                                    </div>
+                                    <span class="date">May 2023</span>
+                                </div>
+                                <h5>Bachelor of Engineering in Computer Science and Business Systems</h5>
+                                <p>Data Structures and Algorithms, Computer Architecture, Data Science, Operating Systems, Cloud Microservices and Container Technologies, Software Development(Agile), Financial Management, Distributed Systems</p>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>  -->
+    </section>
 
-<!-- --------------portfolio------------------ -->
-
-<div id="myWork">
-    <div class="container">
-        <h1 class="sub-title">My Work</h1>
-        <div class="portfolio-container">
-            <div class="filter-buttons">
-                <button class="filter-btn" data-category="all">
-                All <i class="fas fa-code"></i>
-                </button>
-                <button class="filter-btn" data-category="fullStackDevelopment">
-                    Full Stack Development <i class="fas fa-paint-brush"></i>
-                </button>
-                <button class="filter-btn" data-category="backendDevelopment">
-                    Backend Development <i class="fas fa-paint-brush"></i>
-                </button>
-                <button class="filter-btn" data-category="frontendDevelopment">
-                    Frontend Development <i class="fas fa-paint-brush"></i>
-                </button>
-                <button class="filter-btn" data-category="desktopApplicationDevelopment">
-                    Desktop Application Development <i class="fas fa-paint-brush"></i>
-                </button>
-                <button class="filter-btn" data-category="dataScience">
-                    Data Science and Machine Learning <i class="fas fa-paint-brush"></i>
-                </button>
-                <button class="filter-btn" data-category="uiUxDesign">
-                UI/UX Design <i class="fas fa-pencil-alt"></i>
-                </button>
-                <button class="filter-btn" data-category="publication">
-                Publication <i class="fas fa-book"></i>
-                </button>
-            </div>
-            <div id="work-list">
-            <!-- Project tiles will be dynamically inserted here -->
-            </div>
-        </div>
-    </div>
-</div> 
-
-<!-- ------------ contact ------------->
-
-<div id="contact">
-    <div class="container">
-        <div class="row">
-            <div class="contact-left">
-                <h1 class="sub-title">Contact me</h1>
-                <p><i class="fas fa-paper-plane"></i> manishcp77@gmail.com</p>
-                <p><i class="fas fa-phone-square-alt"></i> (617)238-8195</p>
-                <div class="social-icons">
-                    <a href="https://www.linkedin.com/in/manishcp/"><i class="fab fa-linkedin"></i></a>
-                    <a href="https://github.com/ManishCP"><i class="fab fa-github"></i></a>
-                    <a href="https://www.instagram.com/manish.cp/"><i class="fa-brands fa-instagram"></i></a>
+    <!-- Portfolio Section -->
+    <section id="portfolio" class="portfolio-section">
+        <div class="container">
+            <h2 class="section-title">My Work</h2>
+            
+            <div class="portfolio-container">
+                <!-- Filter Sidebar -->
+                <div class="filter-sidebar">
+                    <button class="filter-btn active" data-filter="all">
+                        <span class="filter-icon">💻</span>
+                        <span class="filter-text">All</span>
+                    </button>
+                    <button class="filter-btn" data-filter="fullStackDevelopment">
+                        <span class="filter-icon">🌐</span>
+                        <span class="filter-text">Full Stack Development</span>
+                    </button>
+                    <button class="filter-btn" data-filter="backendDevelopment">
+                        <span class="filter-icon">⚙️</span>
+                        <span class="filter-text">Backend Development</span>
+                    </button>
+                    <button class="filter-btn" data-filter="frontendDevelopment">
+                        <span class="filter-icon">🎨</span>
+                        <span class="filter-text">Frontend Development</span>
+                    </button>
+                    <button class="filter-btn" data-filter="desktopApplicationDevelopment">
+                        <span class="filter-icon">🖥️</span>
+                        <span class="filter-text">Desktop Application Development</span>
+                    </button>
+                    <button class="filter-btn" data-filter="dataScience">
+                        <span class="filter-icon">🤖</span>
+                        <span class="filter-text">Data Science and Machine Learning</span>
+                    </button>
+                    <button class="filter-btn" data-filter="uiUxDesign">
+                        <span class="filter-icon">✏️</span>
+                        <span class="filter-text">UI/UX Design</span>
+                    </button>
+                    <button class="filter-btn" data-filter="publication">
+                        <span class="filter-icon">📚</span>
+                        <span class="filter-text">Publication</span>
+                    </button>
                 </div>
-                <a href="Docs/ManishCP_FullStackDeveloper.pdf"  download class="btn btn2">Download CV</a>
+
+                <!-- Projects Grid -->
+                <div class="projects-grid" id="projects-grid">
+                    <!-- Projects will be dynamically inserted here -->
+                </div>
             </div>
-            <div class="contact-right">
-                <form id="contactForm" onsubmit="sendEmail(); rest(); return false">
-                    <input type="text" name="name" placeholder="Your Name" required>
-                    <input type="email" name="email" placeholder="Your Email" required>
-                    <textarea name="message" rows="6" placeholder="Your Message" required></textarea>
-                    <button type="submit" class="btn btn2">Submit</button>
-                </form>
+        </div>
+    </section>
+
+    <!-- Contact Section - Standard Layout -->
+    <section id="contact" class="contact-section">
+        <div class="container">
+            <h2 class="section-title">Contact Me</h2>
+            
+            <div class="contact-container">
+                <!-- Left Column - Contact Info -->
+                <div class="contact-left">
+                    <div class="contact-info">
+                        <div class="contact-item">
+                            <i class="fas fa-paper-plane contact-icon"></i>
+                            <span>manishcp77@gmail.com</span>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-phone-square-alt contact-icon"></i>
+                            <span>(617)238-8195</span>
+                        </div>
+                    </div>
+
+                    <div class="social-icons">
+                        <a href="https://www.linkedin.com/in/manishcp/" target="_blank" class="social-icon">
+                            <i class="fab fa-linkedin"></i>
+                        </a>
+                        <a href="https://github.com/ManishCP" target="_blank" class="social-icon">
+                            <i class="fab fa-github"></i>
+                        </a>
+                        <a href="https://www.instagram.com/manish.cp/" target="_blank" class="social-icon">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                    </div>
+
+                    <a href="Docs/ManishCP_FullStackDeveloper.pdf" download class="download-cv-btn">
+                        <i class="fas fa-download"></i>
+                        Download CV
+                    </a>
+                </div>
+
+                <!-- Right Column - Contact Form -->
+                <div class="contact-right">
+                    <form id="contact-form" class="contact-form">
+                        <input type="text" name="name" placeholder="Your Name" required>
+                        <input type="email" name="email" placeholder="Your Email" required>
+                        <textarea name="message" rows="6" placeholder="Your Message" required></textarea>
+                        <button type="submit" class="submit-btn">
+                            <i class="fas fa-paper-plane"></i>
+                            <span>Submit</span>
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <div class="footer">
+            <p>Copyright © Manish 2024</p>
+        </div>
+    </section>
+
+    <!-- Project Modal -->
+    <div class="modal-overlay" id="project-modal">
+        <div class="modal-content">
+            <button class="modal-close" id="modal-close">
+                <i class="fas fa-times"></i>
+            </button>
+            <div class="modal-header">
+                <img id="modal-image" src="/placeholder.svg" alt="">
+            </div>
+            <div class="modal-body">
+                <div class="modal-info">
+                    <h3 id="modal-title"></h3>
+                    <span class="modal-category" id="modal-category"></span>
+                </div>
+                <a id="modal-link" href="" target="_blank" class="modal-link-btn" style="display: none;">
+                    <i class="fas fa-external-link-alt"></i>
+                    View Project
+                </a>
+            </div>
+            <p id="modal-description" class="modal-description"></p>
+            <div class="modal-tech-stack">
+                <h4>Tech Stack:</h4>
+                <div id="modal-tech-tags" class="tech-tags"></div>
             </div>
         </div>
     </div>
-    <div class="copyright">
-        <p>Copyright © Manish 2024</p>
-    </div>
-</div>
 
-
-<script src="index.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>
