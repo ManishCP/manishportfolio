@@ -137,7 +137,6 @@ const projectsGrid = document.getElementById("projects-grid")
 const filterBtns = document.querySelectorAll(".filter-btn")
 const tabBtns = document.querySelectorAll(".tab-btn")
 const tabContents = document.querySelectorAll(".tab-content")
-const contactForm = document.getElementById("contact-form")
 const modal = document.getElementById("project-modal")
 const modalClose = document.getElementById("modal-close")
 
@@ -233,9 +232,6 @@ function setupEventListeners() {
       closeModal()
     }
   })
-
-  // Contact form
-  contactForm.addEventListener("submit", handleFormSubmit)
 
   // Smooth scrolling for anchor links
   document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
@@ -337,26 +333,6 @@ function openModal(project) {
 function closeModal() {
   modal.classList.remove("active")
   document.body.style.overflow = "auto"
-}
-
-// Contact form handling
-function handleFormSubmit(e) {
-  e.preventDefault()
-
-  const submitBtn = e.target.querySelector(".submit-btn")
-  const originalText = submitBtn.innerHTML
-
-  // Show loading state
-  submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Sending...'
-  submitBtn.disabled = true
-
-  // Simulate form submission
-  setTimeout(() => {
-    alert("Your message has been sent successfully!")
-    contactForm.reset()
-    submitBtn.innerHTML = originalText
-    submitBtn.disabled = false
-  }, 2000)
 }
 
 // Intersection Observer for animations
